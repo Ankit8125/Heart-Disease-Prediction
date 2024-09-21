@@ -1,4 +1,4 @@
-# End-to-End Heart Disease Classification
+# Heart Disease Prediction
 This project aims to predict the presence of heart disease in a patient based on clinical parameters using various machine learning techniques. The notebook walks through the steps of loading data, exploratory data analysis (EDA), building models, and evaluating their performance.
 
 ## Table of Contents
