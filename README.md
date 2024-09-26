@@ -70,12 +70,12 @@ The following steps were taken to analyze the data:
 The following machine learning algorithms were implemented:
 - **Logistic Regression**
 - **K-Nearest Neighbors (KNN)** 
-- **Random Forest Classifier** 
+- **Random Forest Classifier** <br/>
 Hyperparameters for these models were optimized using **RandomizedSearchCV** and **GridSearchCV** to improve accuracy.
 
 ## Evaluation
 Model performance was assessed using the following metrics:
 - **Confusion Matrix**: To analyze model predictions versus actual outcomes.
 - **Precision, Recall, F1-Score**: To understand the balance between false positives and negatives.
-- **ROC Curve**: To visualize the model’s ability to distinguish between classes.
+- **ROC Curve**: To visualize the model’s ability to distinguish between classes.<br/>
 The final model achieved an accuracy of **81.96%**, making it a reliable predictor of heart disease based on the provided features.
