@@ -1,35 +1,34 @@
 # Heart Disease Prediction
-This project aims to predict the presence of heart disease in a patient based on clinical parameters using various machine learning techniques. The notebook walks through the steps of loading data, exploratory data analysis (EDA), building models, and evaluating their performance.
+This project aims to predict the presence of heart disease in a patient based on clinical parameters using various machine learning techniques. The notebook demonstrates the steps of loading data, exploratory data analysis (EDA), feature engineering, building machine learning models, and evaluating their performance.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Dataset](#dataset)
 3. [Installation](#installation)
-4. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-5. [Modeling](#modeling)
-6. [Evaluation](#evaluation)
+4. [Dependencies](#dependencies)
+5. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+6. [Modeling](#modeling)
+7. [Evaluation](#evaluation)
 
 ## Project Overview
-The objective of this project is to use machine learning algorithms to predict heart disease based on various medical attributes. The following approach is used:
+The objective of this project is to predict heart disease using various medical attributes. The key workflow is as follows:
 
 1. **Problem Definition**: 
-   - Given clinical parameters about a patient, can we predict whether or not they have heart disease?
+   - Can we predict whether a patient has heart disease based on their clinical attributes?
+   - This is a binary classification problem, where the presence or absence of heart disease is predicted.
 2. **Data**: 
-   - Sourced from the Kaggle Heart Disease dataset: [Kaggle Dataset](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset).
+   - The dataset is sourced from the [Kaggle Heart Disease dataset](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset).
+   - It includes medical attributes such as age, sex, chest pain type, cholesterol levels, and more.
 3. **Evaluation**: 
    - Maximizing the accuracy of predictions.
-   - Accuracy achieved: **81.96%**
+   - The best-performing model achieved **81.96%** accuracy using `train_test_split`.
 
 ## Dataset
 The dataset contains the following features:
 
 - **age**: Age in years
 - **sex**: Gender (1 = male, 0 = female)
-- **cp**: Chest pain type
-  - 0: Typical angina
-  - 1: Atypical angina
-  - 2: Non-anginal pain
-  - 3: Asymptomatic
+- **cp**: Chest pain type (0 = Typical angina, 1 = Atypical angina, 2 = Non-anginal pain, 3 = Asymptomatic)
 - **trestbps**: Resting blood pressure (mm Hg)
 - **chol**: Serum cholesterol in mg/dl
 - **fbs**: Fasting blood sugar > 120 mg/dl (1 = true, 0 = false)
@@ -62,19 +61,21 @@ pip install -r requirements.txt
 - Scikit-learn
   
 ## Exploratory Data Analysis (EDA)
-The notebook explores the following aspects of the data:
-- Data distribution and missing values.
-- Relationships between features and the target variable.
-- Visualizations to better understand the dataset using matplotlib and seaborn.
+The following steps were taken to analyze the data:
+- **Data Cleaning**: Identified and handled missing values appropriately.
+- **Visualization**: Explored data distributions, relationships between features, and correlations using Matplotlib and Seaborn.
+- **Feature Analysis**: Investigated how key features (like age, chest pain type, and cholesterol) impact heart disease occurrence.
 
 ## Modeling
-The following machine learning algorithms are used:
-- Logistic Regression <br>
-- K-Nearest Neighbors (KNN) <br>
-- Random Forest Classifier <br><br>
-Model hyperparameters are tuned using RandomizedSearchCV and GridSearchCV to find the optimal configuration.
+The following machine learning algorithms were implemented:
+- **Logistic Regression**
+- **K-Nearest Neighbors (KNN)** 
+- **Random Forest Classifier** 
+Hyperparameters for these models were optimized using **RandomizedSearchCV** and **GridSearchCV** to improve accuracy.
 
 ## Evaluation
-Model performance is evaluated based on:
-- Confusion Matrix, Precision, Recall, F1-Score. ROC Curve
-- The final model achieved an accuracy of 81.96%.
+Model performance was assessed using the following metrics:
+- **Confusion Matrix**: To analyze model predictions versus actual outcomes.
+- **Precision, Recall, F1-Score**: To understand the balance between false positives and negatives.
+- **ROC Curve**: To visualize the model’s ability to distinguish between classes.
+The final model achieved an accuracy of **81.96%**, making it a reliable predictor of heart disease based on the provided features.
