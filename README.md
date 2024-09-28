@@ -9,6 +9,7 @@ This project aims to predict the presence of heart disease in a patient based on
 5. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 6. [Modeling](#modeling)
 7. [Evaluation](#evaluation)
+8. [Scikit-Learn Workflow](#scikit-learn-workflow)
 
 ## Project Overview
 The objective of this project is to predict heart disease using various medical attributes. The key workflow is as follows:
@@ -72,6 +73,14 @@ The following machine learning algorithms were implemented:
 - **K-Nearest Neighbors (KNN)** 
 - **Random Forest Classifier** <br/>
 Hyperparameters for these models were optimized using **RandomizedSearchCV** and **GridSearchCV** to improve accuracy.
+
+## Scikit-Learn Workflow
+1. Get data ready
+2. Pick a model(to suit your problem)
+3. Fit the model to the data and make a prediction
+4. Evaluate the model
+5. Improve through experimentation
+6. Save and reload your trained model
 
 ## Evaluation
 Model performance was assessed using the following metrics:
